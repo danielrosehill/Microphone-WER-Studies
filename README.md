@@ -142,7 +142,7 @@ Daniel Rosehill. *Personal benchmark*. [Source](https://github.com/danielrosehil
 
 ## Prices
 
-Checked 2026-11-23. `price_basis` says what each figure is: `manufacturer list`, `reseller-stated list`, `price in study`, or `author's approximate price`. Only the first is a confirmed manufacturer price. Sale prices are excluded. `n/a` means no list price was found or none applies; repeat conditions are left blank.
+Checked 2026-11-23. `price_basis` says what each figure is: `manufacturer list`, `reseller-stated list`, `price in study`, or `author's approximate price`. Only the first is a confirmed manufacturer price. Sale prices are excluded. `n/a` means no list price was found or none applies.
 
 ## Data
 
