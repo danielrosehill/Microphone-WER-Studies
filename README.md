@@ -10,7 +10,7 @@ Which microphone gives the lowest word error rate (WER) in speech recognition? T
 
 - **Alander 2025:** eight of eleven mics averaged 3.96-4.65%. With the strongest fan, results ran from 4.87% to 99.17%.
 - **Bradford 2022:** script reading spanned 10.7-12.0%, within one SD. The authors found no clear relationship between price and ASR performance.
-- **Tran 2026:** on Azure Whisper, five devices spanned 17.6-17.9%. Engine medians spanned 16.7-20.7%.
+- **Tran 2026:** on Azure Whisper, five devices spanned 17.6-17.9%; on Google Medical, 19.8-25.0%. Engine medians spanned 16.7-20.7%.
 - **LOTUSDIS 2025:** untuned Whisper got much worse on the distant devices.
 
 ## Results
@@ -37,14 +37,26 @@ Sanna Alander. *Master's thesis, Aalto University*. [Source](https://aaltodoc.aa
 | JBL Tune 520BT | Headphones, Bluetooth, built-in mic | quiet | 7.48% | [USD 59.95](https://www.jbl.com/TUNE520BT.html) (manufacturer list) |
 | HP 255 G8 laptop mic | Laptop, built-in | quiet | 11.63% | n/a |
 | Logitech USB headset (older, unnamed) | Headset, wired USB | quiet | 13.70% | n/a |
-| Philips SpeechOne PSM6500 series | Headset, wireless dictation | strongest fan airflow (phase 3) | 52.87% | n/a |
-| Philips SpeechOne PSM6500 series | Headset, wireless dictation | loudest background noise (phase 3) | 12.25% | n/a |
-| Olympus RecMic DR-2200 | Handheld dictation, wired | strongest fan airflow (phase 3) | 19.32% | n/a |
-| Olympus RecMic DR-2200 | Handheld dictation, wired | loudest background noise (phase 3) | 8.44% | n/a |
-| Poly Blackwire C5210T | Headset, wired USB boom | strongest fan airflow (phase 3) | 99.17% | n/a |
-| Poly Blackwire C5210T | Headset, wired USB boom | loudest background noise (phase 3) | 4.96% | n/a |
-| Philips SpeechMike Premium Touch SMP3700/3800 | Handheld dictation, wired USB | strongest fan airflow (phase 3) | 4.87% | n/a |
-| Philips SpeechMike Premium Touch SMP3700/3800 | Handheld dictation, wired USB | loudest background noise (phase 3) | 9.52% | n/a |
+| Philips SpeechOne PSM6500 series | Headset, wireless dictation | phase 3: no distraction | 3.41% | n/a |
+| Philips SpeechOne PSM6500 series | Headset, wireless dictation | phase 3: fan level 1 | 17.89% | n/a |
+| Philips SpeechOne PSM6500 series | Headset, wireless dictation | phase 3: fan level 2 (strongest) | 52.87% | n/a |
+| Philips SpeechOne PSM6500 series | Headset, wireless dictation | phase 3: noise level 5 | 3.80% | n/a |
+| Philips SpeechOne PSM6500 series | Headset, wireless dictation | phase 3: noise level 6 (loudest) | 12.25% | n/a |
+| Olympus RecMic DR-2200 | Handheld dictation, wired | phase 3: no distraction | 3.37% | n/a |
+| Olympus RecMic DR-2200 | Handheld dictation, wired | phase 3: fan level 1 | 4.59% | n/a |
+| Olympus RecMic DR-2200 | Handheld dictation, wired | phase 3: fan level 2 (strongest) | 19.32% | n/a |
+| Olympus RecMic DR-2200 | Handheld dictation, wired | phase 3: noise level 5 | 3.85% | n/a |
+| Olympus RecMic DR-2200 | Handheld dictation, wired | phase 3: noise level 6 (loudest) | 8.44% | n/a |
+| Poly Blackwire C5210T | Headset, wired USB boom | phase 3: no distraction | 4.14% | n/a |
+| Poly Blackwire C5210T | Headset, wired USB boom | phase 3: fan level 1 | 96.15% | n/a |
+| Poly Blackwire C5210T | Headset, wired USB boom | phase 3: fan level 2 (strongest) | 99.17% | n/a |
+| Poly Blackwire C5210T | Headset, wired USB boom | phase 3: noise level 5 | 4.15% | n/a |
+| Poly Blackwire C5210T | Headset, wired USB boom | phase 3: noise level 6 (loudest) | 4.96% | n/a |
+| Philips SpeechMike Premium Touch SMP3700/3800 | Handheld dictation, wired USB | phase 3: no distraction | 3.78% | n/a |
+| Philips SpeechMike Premium Touch SMP3700/3800 | Handheld dictation, wired USB | phase 3: fan level 1 | 3.32% | n/a |
+| Philips SpeechMike Premium Touch SMP3700/3800 | Handheld dictation, wired USB | phase 3: fan level 2 (strongest) | 4.87% | n/a |
+| Philips SpeechMike Premium Touch SMP3700/3800 | Handheld dictation, wired USB | phase 3: noise level 5 | 3.29% | n/a |
+| Philips SpeechMike Premium Touch SMP3700/3800 | Handheld dictation, wired USB | phase 3: noise level 6 (loudest) | 9.52% | n/a |
 
 ### Mariah Bradford (2022): A deep dive into microphone hardware for recording collaborative group work
 
@@ -74,18 +86,43 @@ Mariah Bradford, Paige Hansen, Ross Beveridge, Nikhil Krishnaswamy, Nathaniel Bl
 
 Brian D. Tran, Di Hu, Seungjun Kim, Yawen Guo, Ramya Mangu, Tera L. Reynolds, Jennifer Elston Lafata, Ming Tai-Seale, Kai Zheng. *Preprint, not peer reviewed*. [Source](https://pmc.ncbi.nlm.nih.gov/articles/PMC13228836/)
 
-- **Engine:** Azure Whisper (one of six engines tested)
+- **Engine:** AWS General, AWS Medical, Azure Whisper, Azure General, Google General, Google Medical
 - **Statistic:** median WER
 - **Setup:** 35 re-enacted clinical conversations, simultaneous recording, about 1.5 ft; clip-on worn by one speaker; quiet
 - **Limits:** Two speakers. Across engines, pooled medians ranged 16.7-20.7%.
 
 | Microphone | Type | Condition | WER | List price |
 |---|---|---|---|---|
-| Blue Yeti | Desktop USB condenser | two-person conversation, quiet | 17.60% | [USD 139.99](https://www.logitechg.com/en-us/shop/p/yeti-premium-usb-microphone) (manufacturer list) |
-| MacBook Pro 2017 | Laptop, built-in | two-person conversation, quiet | 17.60% | n/a |
-| Samsung Galaxy S7 | Phone, built-in | two-person conversation, quiet | 17.70% | n/a |
-| Sony ICD-UX533 | Portable voice recorder | two-person conversation, quiet | 17.90% | n/a |
-| Aputure A.lav | Lavalier / clip-on | two-person conversation, quiet | 17.90% | n/a |
+| Blue Yeti | Desktop USB condenser | two-person conversation, quiet, AWS General | 16.70% | [USD 139.99](https://www.logitechg.com/en-us/shop/p/yeti-premium-usb-microphone) (manufacturer list) |
+| Sony ICD-UX533 | Portable voice recorder | two-person conversation, quiet, AWS General | 16.70% | n/a |
+| Samsung Galaxy S7 | Phone, built-in | two-person conversation, quiet, AWS General | 16.80% | n/a |
+| MacBook Pro 2017 | Laptop, built-in | two-person conversation, quiet, AWS General | 16.70% | n/a |
+| Aputure A.lav | Lavalier / clip-on | two-person conversation, quiet, AWS General | 16.80% | n/a |
+| Blue Yeti | Desktop USB condenser | two-person conversation, quiet, AWS Medical | 16.80% | [USD 139.99](https://www.logitechg.com/en-us/shop/p/yeti-premium-usb-microphone) (manufacturer list) |
+| Sony ICD-UX533 | Portable voice recorder | two-person conversation, quiet, AWS Medical | 16.80% | n/a |
+| Samsung Galaxy S7 | Phone, built-in | two-person conversation, quiet, AWS Medical | 16.90% | n/a |
+| MacBook Pro 2017 | Laptop, built-in | two-person conversation, quiet, AWS Medical | 16.80% | n/a |
+| Aputure A.lav | Lavalier / clip-on | two-person conversation, quiet, AWS Medical | 16.90% | n/a |
+| Blue Yeti | Desktop USB condenser | two-person conversation, quiet, Azure Whisper | 17.60% | [USD 139.99](https://www.logitechg.com/en-us/shop/p/yeti-premium-usb-microphone) (manufacturer list) |
+| Sony ICD-UX533 | Portable voice recorder | two-person conversation, quiet, Azure Whisper | 17.90% | n/a |
+| Samsung Galaxy S7 | Phone, built-in | two-person conversation, quiet, Azure Whisper | 17.70% | n/a |
+| MacBook Pro 2017 | Laptop, built-in | two-person conversation, quiet, Azure Whisper | 17.60% | n/a |
+| Aputure A.lav | Lavalier / clip-on | two-person conversation, quiet, Azure Whisper | 17.90% | n/a |
+| Blue Yeti | Desktop USB condenser | two-person conversation, quiet, Azure General | 18.40% | [USD 139.99](https://www.logitechg.com/en-us/shop/p/yeti-premium-usb-microphone) (manufacturer list) |
+| Sony ICD-UX533 | Portable voice recorder | two-person conversation, quiet, Azure General | 18.30% | n/a |
+| Samsung Galaxy S7 | Phone, built-in | two-person conversation, quiet, Azure General | 18.30% | n/a |
+| MacBook Pro 2017 | Laptop, built-in | two-person conversation, quiet, Azure General | 18.30% | n/a |
+| Aputure A.lav | Lavalier / clip-on | two-person conversation, quiet, Azure General | 18.50% | n/a |
+| Blue Yeti | Desktop USB condenser | two-person conversation, quiet, Google General | 19.70% | [USD 139.99](https://www.logitechg.com/en-us/shop/p/yeti-premium-usb-microphone) (manufacturer list) |
+| Sony ICD-UX533 | Portable voice recorder | two-person conversation, quiet, Google General | 19.40% | n/a |
+| Samsung Galaxy S7 | Phone, built-in | two-person conversation, quiet, Google General | 19.60% | n/a |
+| MacBook Pro 2017 | Laptop, built-in | two-person conversation, quiet, Google General | 19.70% | n/a |
+| Aputure A.lav | Lavalier / clip-on | two-person conversation, quiet, Google General | 22.00% | n/a |
+| Blue Yeti | Desktop USB condenser | two-person conversation, quiet, Google Medical | 20.60% | [USD 139.99](https://www.logitechg.com/en-us/shop/p/yeti-premium-usb-microphone) (manufacturer list) |
+| Sony ICD-UX533 | Portable voice recorder | two-person conversation, quiet, Google Medical | 19.80% | n/a |
+| Samsung Galaxy S7 | Phone, built-in | two-person conversation, quiet, Google Medical | 20.00% | n/a |
+| MacBook Pro 2017 | Laptop, built-in | two-person conversation, quiet, Google Medical | 20.00% | n/a |
+| Aputure A.lav | Lavalier / clip-on | two-person conversation, quiet, Google Medical | 25.00% | n/a |
 
 ### Pattara Tipaksorn (2025): LOTUSDIS: A Thai far-field meeting corpus for robust conversational ASR
 
@@ -146,9 +183,10 @@ Checked 2026-11-23. `price_basis` says what each figure is: `manufacturer list`,
 
 ## Data
 
-- [`data/results.csv`](data/results.csv): one row per study, microphone and condition.
+- **Hugging Face dataset:** [danielrosehill/Microphone-WER-Studies](https://huggingface.co/datasets/danielrosehill/Microphone-WER-Studies)
+- [`data/master.csv`](data/master.csv): the master table, one row per result, with its full source on every row. This repo feeds the Hugging Face copy (`uv run scripts/push_hf.py`).
 - [`data/studies.json`](data/studies.json): citations, methods and limits.
-- [`scripts/build.py`](scripts/build.py): edit this, then run `uv run scripts/build.py` to regenerate both files and this README.
+- [`scripts/build.py`](scripts/build.py): edit this, then run `uv run scripts/build.py` to regenerate the data files and this README.
 
 Corrections and more studies are welcome by issue or pull request. Please include a source that reports WER by microphone.
 
