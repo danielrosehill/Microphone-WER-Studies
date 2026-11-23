@@ -8,7 +8,7 @@
     "engine": "Dragon Medical One",
     "statistic": "mean WER, average of stages 1 and 2 (Table 9)",
     "setup": "Close-up dictation in quiet; 60 cm laptop, 6.5 cm handhelds, 3 cm headsets in playback tests",
-    "limits": "Two speakers in stage 1, six in stage 2; stage 2 replayed SpeechOne recordings through a Bose SoundLink Mini; distance not tested. Thesis is CC BY-NC-SA 4.0; only numeric results are cited here."
+    "limits": "Two speakers in stage 1, six in stage 2, two in phase 3; stages 2-3 replayed SpeechOne recordings through a Bose SoundLink Mini; distance not tested. Thesis is CC BY-NC-SA 4.0; only numeric results are cited here."
   },
   "bradford-2022": {
     "authors": "Mariah Bradford, Paige Hansen, Ross Beveridge, Nikhil Krishnaswamy, Nathaniel Blanchard",

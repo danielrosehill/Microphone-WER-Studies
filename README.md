@@ -22,7 +22,7 @@ Sanna Alander. *Master's thesis, Aalto University*. [Source](https://aaltodoc.aa
 - **Engine:** Dragon Medical One
 - **Statistic:** mean WER, average of stages 1 and 2 (Table 9)
 - **Setup:** Close-up dictation in quiet; 60 cm laptop, 6.5 cm handhelds, 3 cm headsets in playback tests
-- **Limits:** Two speakers in stage 1, six in stage 2; stage 2 replayed SpeechOne recordings through a Bose SoundLink Mini; distance not tested. Thesis is CC BY-NC-SA 4.0; only numeric results are cited here.
+- **Limits:** Two speakers in stage 1, six in stage 2, two in phase 3; stages 2-3 replayed SpeechOne recordings through a Bose SoundLink Mini; distance not tested. Thesis is CC BY-NC-SA 4.0; only numeric results are cited here.
 
 | Microphone | Type | Condition | WER | List price |
 |---|---|---|---|---|
@@ -184,6 +184,7 @@ Checked 2026-11-23. `price_basis` says what each figure is: `manufacturer list`,
 ## Data
 
 - **Hugging Face dataset:** [danielrosehill/Microphone-WER-Studies](https://huggingface.co/datasets/danielrosehill/Microphone-WER-Studies)
+- **Interactive explorer:** [Microphone WER Explorer](https://huggingface.co/spaces/danielrosehill/Microphone-WER-Explorer), source in [`space/`](space/) (redeploy: `uv run scripts/push_space.py`)
 - [`data/master.csv`](data/master.csv): the master table, one row per result, with its full source on every row. This repo feeds the Hugging Face copy (`uv run scripts/push_hf.py`).
 - [`data/studies.json`](data/studies.json): citations, methods and limits.
 - [`scripts/build.py`](scripts/build.py): edit this, then run `uv run scripts/build.py` to regenerate the data files and this README.

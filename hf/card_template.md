@@ -13,6 +13,8 @@ configs:
 
 Published word error rates (WER) by microphone, with microphone type, list price where found, and the source on every row. {{N}} results from five sources.
 
+**Explore:** [Microphone WER Explorer](https://huggingface.co/spaces/danielrosehill/Microphone-WER-Explorer)
+
 Generated from [github.com/danielrosehill/Microphone-WER-Studies](https://github.com/danielrosehill/Microphone-WER-Studies). Please send corrections there.
 
 ## Do not rank across the whole table
