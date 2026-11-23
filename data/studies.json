@@ -1,0 +1,57 @@
+{
+  "alander-2025": {
+    "authors": "Sanna Alander",
+    "year": 2025,
+    "title": "Comparing Microphones Used in Medical Dictation Based on Speech Recognition Accuracy and Usability",
+    "venue": "Master's thesis, Aalto University",
+    "url": "https://aaltodoc.aalto.fi/handle/123456789/135659",
+    "engine": "Dragon Medical One",
+    "statistic": "mean WER, average of stages 1 and 2 (Table 9)",
+    "setup": "Close-up dictation in quiet; 60 cm laptop, 6.5 cm handhelds, 3 cm headsets in playback tests",
+    "limits": "Two speakers in stage 1, six in stage 2; stage 2 replayed SpeechOne recordings through a Bose SoundLink Mini; distance not tested. Thesis is CC BY-NC-SA 4.0; only numeric results are cited here."
+  },
+  "bradford-2022": {
+    "authors": "Mariah Bradford, Paige Hansen, Ross Beveridge, Nikhil Krishnaswamy, Nathaniel Blanchard",
+    "year": 2022,
+    "title": "A deep dive into microphone hardware for recording collaborative group work",
+    "venue": "Educational Data Mining 2022 (poster)",
+    "url": "https://educationaldatamining.org/edm2022/proceedings/2022.EDM-posters.65/index.html",
+    "engine": "Google Cloud ASR",
+    "statistic": "mean WER",
+    "setup": "33 people in 11 groups, simultaneous recording, mics 5 ft away",
+    "limits": "One ASR engine; differences within one SD; Blue Yeti used in omni mode. Authors' overall pick was the MXL AC-404, for noise robustness and price."
+  },
+  "tran-2026": {
+    "authors": "Brian D. Tran, Di Hu, Seungjun Kim, Yawen Guo, Ramya Mangu, Tera L. Reynolds, Jennifer Elston Lafata, Ming Tai-Seale, Kai Zheng",
+    "year": 2026,
+    "title": "Does Recording Hardware Matter for Clinical Speech Recognition? Evaluating ASR Performance Across Consumer Devices",
+    "venue": "Preprint, not peer reviewed",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13228836/",
+    "engine": "Azure Whisper (one of six engines tested)",
+    "statistic": "median WER",
+    "setup": "35 re-enacted clinical conversations, simultaneous recording, about 1.5 ft; clip-on worn by one speaker; quiet",
+    "limits": "Two speakers. Across engines, pooled medians ranged 16.7-20.7%."
+  },
+  "tipaksorn-2025": {
+    "authors": "Pattara Tipaksorn et al.",
+    "year": 2025,
+    "title": "LOTUSDIS: A Thai far-field meeting corpus for robust conversational ASR",
+    "venue": "arXiv:2509.18722",
+    "url": "https://arxiv.org/abs/2509.18722",
+    "engine": "Whisper large-v3, zero-shot",
+    "statistic": "WER",
+    "setup": "Spontaneous three-person Thai meetings with overlapping speech",
+    "limits": "Device and distance change together; not a dictation task."
+  },
+  "rosehill-2025": {
+    "authors": "Daniel Rosehill",
+    "year": 2025,
+    "title": "One-Shot Transcription Microphone Eval",
+    "venue": "Personal benchmark",
+    "url": "https://github.com/danielrosehill/One-Shot-Transcription-Microphone-Eval",
+    "engine": "OpenAI whisper-1",
+    "statistic": "WER, single take",
+    "setup": "One speaker, one 315-word passage, mostly a quiet home office",
+    "limits": "One take per condition; one word is 0.32 points, so the 4.13-6.35% spread is about seven words. An anecdotal data point, not a ranking."
+  }
+}
